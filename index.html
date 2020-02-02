@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <header>
   <a href="#"><img src="img/logo-sedona.svg" width="140px" height="72px" alt="логотип sedona"></a>
   <nav>
     <ul>
-      <li><a href="#">Информация</a></li>
+      <li><a href="">Информация</a></li>
       <li><a href="">Фото и видео</a></li>
       <li><a href="">Карта штата</a></li>
       <li><a href="hotels.html">Гостиницы</a></li>
@@ -17,54 +18,75 @@
   </nav>
 </header>
 <main>
+  <h1 class="visually-hidden">Седона — небольшой городок в Аризоне</h1>
   <section>
     <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
     <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
   </section>
   <section>
+    <h2 class="visually-hidden">Приемущества городка Седона</h2>
     <div>
-      <h2>Настоящий городок</h2>
+      <h3>Настоящий городок</h3>
       <span>— №1 —</span>
       <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
     </div>
     <img src="img/advantages_house.jpg" width="800" height="256" alt="фотография домика в Седоне">
     <div>
-      <h2>Жилье</h2>
+      <h3>Жилье</h3>
       <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
     </div>
     <div>
-      <h2>Еда</h2>
+      <h3>Еда</h3>
       <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
     </div>
     <div>
-      <h2>Сувениры</h2>
+      <h3>Сувениры</h3>
       <p>Не только китайского, но и местного производства!</p>
     </div>
     <img src="img/advantages_mountains.jpg" width="800" height="256" alt="фотография моста дьявола">
     <div>
-      <h2>Там есть мост дьявола</h2>
+      <h3>Там есть мост дьявола</h3>
       <span>— №2 —</span>
       <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
     </div>
     <div>
-      <h2>Небольшая площадь</h2>
+      <h3>Небольшая площадь</h3>
       <span>— №3 —</span>
       <p>Все достопримечательности находятся очень близко</p>
     </div>
     <div>
-      <h2>Красивая дорога</h2>
+      <h3>Красивая дорога</h3>
       <span>— №4 —</span>
       <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
     </div>
     <div>
-      <h2>Мало туристов</h2>
+      <h3>Мало туристов</h3>
       <span>— №5 —</span>
       <p>Большинство едет в гранд каньон и толпится там</p>
     </div>
   </section>
   <section>
+    <h2 class="visually-hidden">Забронировать отель</h2>
     <p>Заинтересовались?</p>
     <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+    <button type="button">Поиск гостиницы в седоне</button>
+    <form action="https://echo.htmlacademy.ru" method="get">
+      <label for="checkin_date_id">Дата заезда:</label><input type="date" name="checkin_date" id="checkin_date_id" value="2017-04-24">
+      <label for="checkout_date_id">Дата выезда:</label><input type="date" name="checkout_date" id="checkout_date_id" value="2017-07-04">
+      <p>
+        <label for="grown_id">Взрослые:</label>
+        <button type="button" title="меньше">-</button>
+        <input type="number" name="grown" id="grown_id" value="2">
+        <button type="button" title="больше">+</button>
+      </p>
+      <p>
+        <label for="children_id">Дети:</label>
+        <button type="button" title="меньше">-</button>
+        <input type="number" name="children" id="children_id" value="0">
+        <button type="button" title="больше">+</button>
+      </p>
+      <button type="submit">Найти</button>
+    </form>
   </section>
 </main>
 <article>
@@ -82,7 +104,7 @@
   </ul>
   <p>
     Website by
-    <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115px" height="41px" alt="логотип HTMLacademy"></a>
+    <a href="https://htmlacademy.ru/intensive/htmlcss" title="страница HTML academy"><img src="img/logo-htmlacademy.svg" width="115px" height="41px" alt="логотип HTMLacademy"></a>
   </p>
 </footer>
 </body>
