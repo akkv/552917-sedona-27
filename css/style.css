@@ -92,6 +92,7 @@ h3 {
   color: white;
   background-color: #766357;
   border: none;
+  text-transform: uppercase;
 }
 .hotel-search_btn:hover,
 .hotel-search_btn:focus {
@@ -157,6 +158,7 @@ h3 {
   color: white;
   border: none;
   background-color: #81b3d2;
+  text-transform: uppercase;
 }
 .search_btn:hover,
 .search_btn:focus {
