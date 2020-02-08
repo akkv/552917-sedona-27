@@ -1,10 +1,339 @@
 .visually-hidden {
-   position: absolute !important;
-   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-   clip: rect(1px, 1px, 1px, 1px);
-   padding: 0 !important;
-   border: 0 !important;
-   height: 1px !important;
-   width: 1px !important;
-   overflow: hidden;
- }
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+body {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  text-transform: uppercase;
+  text-align: center;
+}
+.hotels {
+  color: black;
+}
+h3 {
+  color: black;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+
+/*Навигация*/
+.nav_list {
+  list-style: none;
+}
+.nav_link {
+  color: black;
+  line-height: 26px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.nav_link:hover,
+.nav_link:focus {
+  color: #81b3d2;
+}
+.nav_link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+.nav_active,
+.nav_active:hover,
+.nav_active:focus {
+  color: #766357;
+  cursor: default;
+}
+
+
+/*Приемущества*/
+.sedona_cool p {
+  line-height: 26px;
+}
+.advantages_item h3 {
+  line-height: 21px;
+}
+.blue {
+  background-color: #81b3d2;
+  color: white;
+}
+.blue h3 {
+  color: inherit;
+}
+.advantages_item:nth-last-child(-n+3) {
+  background-color: #eeeeee;
+}
+
+
+/*Заинтересовались*/
+.interest_title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: black;
+}
+.interest_text {
+  line-height: 24px;
+}
+
+
+/*Даты заезда*/
+.hotel-search_btn {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: white;
+  background-color: #766357;
+  border: none;
+}
+.hotel-search_btn:hover,
+.hotel-search_btn:focus {
+  background-color: #604e43;
+}
+.hotel-search_btn:active {
+  background-color: #503e33;
+  color: rgba(255,255,255,0.3);
+}
+.hotel-search_form {
+  line-height: 26px;
+  font-weight: 700;
+  color: black;
+  text-align: left;
+}
+.hotel-search_form input,
+.calendar_btn{
+  line-height: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: #f2f2f2;
+  border: none;
+}
+.hotel-search_form input:hover {
+  background-color: #ebebeb;
+}
+.hotel-search_form input:focus {
+  background-color: #fff;
+  border: 2px solid #e5e5e5;
+}
+
+/*.hotel-search_form input::after {*/
+/*  content: '';*/
+/*  display: inline-block;*/
+/*  width: 38px;*/
+/*  height: 38px;*/
+/*  background-image: url('../img/calendar.svg');*/
+/*  background-repeat: no-repeat;*/
+/*  background-position: 50% 50%;*/
+/*  background-size: 21px 22px;*/
+/*  vertical-align: middle;*/
+/*}*/
+.btn_up,
+.btn_down{
+  border: none;
+  color: #a9a9a9;
+  font-size: 26px;
+}
+.btn_up:hover,
+.btn_down:hover,
+.btn_up:focus,
+.btn_down:focus{
+  color: black;
+}
+.btn_up:active,
+.btn_down:active {
+  color: #81b3d2;
+}
+.search_btn {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: white;
+  border: none;
+  background-color: #81b3d2;
+}
+.search_btn:hover,
+.search_btn:focus {
+  background-color: #669ec0;
+}
+.search_btn:active {
+  background-color: #5496bd;
+  color: rgba(255,255,255,0.3);
+}
+
+
+/*Подбор отеля*/
+.filter {
+  background-image: url("../img/filter_background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #647b8d;
+}
+.filter_form {
+  font-size: 16px;
+  color: white;
+}
+.filter_form fieldset {
+  border-style: none;
+}
+.filter_form legend,
+.cost label {
+  font-weight: 700;
+}
+.filter_result{
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: white;
+  text-transform: inherit;
+  background: none;
+}
+.infrastructure_list,
+.type_list {
+  list-style: none;
+}
+
+
+/*Подбор отеля - результаты*/
+/*Сортировка*/
+.result_sort span {
+  font-size: 12px;
+  line-height: 18px;
+}
+.sort_list {
+  list-style: none;
+}
+.sort_link {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(0,0,0,0.3);
+  text-decoration: none;
+  border-bottom: 1px dotted #81b3d2;
+}
+.sort_link:hover,
+.sort_link:focus {
+  color: #81b3d2;
+}
+.sort_link:active {
+  border: none;
+  color: black;
+}
+.sort_active,
+.sort_active:hover,
+.sort_active:focus {
+  color: #81b3d2;
+  cursor: default;
+  border: none;
+}
+
+
+/*Результаты*/
+.result_list {
+  list-style: none;
+}
+.hotel_link {
+  text-decoration: none;
+  color: black;
+}
+.hotel_link:hover,
+.hotel_link:focus {
+  color: #81b3d2;
+}
+.hotel_link:active {
+  color: rgba(0,0,0,0.3);
+}
+.info_btn {
+  background-color: #81b3d2;
+}
+.info_btn:hover,
+.info_btn:focus {
+  background-color: #669ec0;
+}
+.info_btn:active {
+  background-color: #5496bd;
+  color: rgba(255,255,255,0.3);
+}
+.reserv_btn {
+  background-color: #766357;
+}
+.reserv_btn:hover,
+.reserv_btn:focus {
+  background-color: #604e43;
+}
+.reserv_btn:active {
+  background-color: #503e33;
+  color: rgba(255,255,255,0.3);
+}
+.info_btn,
+.reserv_btn {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+.hotel_cost,
+.hotel_rating {
+  color: #333333;
+}
+.hotel_rating {
+  background-color: #f2f2f2;
+}
+
+
+/*Футер*/
+.footer{
+  background-color: rgba(255,255,255,0.9);
+}
+.visit-sedona {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: black;
+}
+.visit-sedona a {
+  color: inherit;
+  text-decoration: none;
+}
+/*.social_list {*/
+/*  list-style: none;*/
+/*}*/
+/*.social_list li {*/
+/*  width: 46px;*/
+/*  height: 48px;*/
+/*}*/
+/*.social_list a {*/
+/*  display: inline-block;*/
+/*  font-size: 0;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  background-color: #81b3d2;*/
+/*}*/
+/*.social_list a:before{*/
+/*  content: '';*/
+/*  display: inline-block;*/
+/*  vertical-align: middle;*/
+/*  height: 100%;*/
+/*}*/
+/*.social_list svg {*/
+/*  display: inline-block;*/
+/*  vertical-align: middle;*/
+/*}*/
+/*.social_list a:hover,*/
+/*.social_list a:focus {*/
+/*  background-color: #669ec0;*/
+/*}*/
+/*.social_list a:active {*/
+/*  background-color: #5496bd;*/
+/*}*/
+/*.social_list a:active path {*/
+/*  fill-opacity: 30%;*/
+/*}*/
+.htmlacademy {
+  line-height: 26px;
+  font-weight: 700;
+}
