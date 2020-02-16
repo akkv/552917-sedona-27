@@ -17,6 +17,17 @@ body {
   text-transform: uppercase;
   text-align: center;
 }
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
 .hotels {
   color: black;
 }
@@ -25,18 +36,47 @@ h3 {
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
+  padding: 0;
+  margin: 0;
 }
-
+h2 {
+  padding: 0;
+  margin: 0;
+}
+.main_hotels {
+  text-align: left;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 /*Навигация*/
 .nav_list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
+.main_logo {
+  /*display: block;*/
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  }
 .nav_link {
   color: black;
   line-height: 26px;
   font-weight: 700;
   text-decoration: none;
+
+  display: inline-block;
+  width: 239px;
+  height: 56px;
+  padding-top: 15px;
+}
+.nav_list_item:nth-child(2) {
+  margin-right: 244px;
 }
 .nav_link:hover,
 .nav_link:focus {
@@ -51,14 +91,67 @@ h3 {
   color: #766357;
   cursor: default;
 }
+.welcome {
+  height: 508px;
+  background-image: url('../img/background_photo.jpg');
+  background-color: #647b8d;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
+  margin-bottom: 60px;
+}
+.welcome_title {
+  margin: 0 auto;
+  margin-bottom: 22px;
+}
 
 /*Приемущества*/
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+}
 .sedona_cool p {
   line-height: 26px;
 }
+.sedona_cool h3 {
+  margin-bottom: 28px;
+}
+.sedona_cool {
+  margin-bottom: 50px;
+}
 .advantages_item h3 {
   line-height: 21px;
+  padding-right: 120px;
+  padding-left: 120px;
+}
+.advantages_item {
+  width: 400px;
+  height: 256px;
+}
+.advantages_item p {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.advantages_food,
+.advantages_souvenirs,
+.advantages_home {
+  height: 330px;
+}
+.advantages_food:before {
+  content: url('../img/food.svg');
+  position: relative;
+  top: 60px;
+}
+.advantages_souvenirs:before {
+  content: url('../img/souvenirs.svg');
+  position: relative;
+  top: 60px;
+}
+.advantages_home:before {
+  content: url('../img/home.svg');
+  position: relative;
+  top: 60px;
 }
 .blue {
   background-color: #81b3d2;
@@ -67,12 +160,28 @@ h3 {
 .blue h3 {
   color: inherit;
 }
+.blue p {
+  padding-left: 48px;
+  padding-right: 48px;
+}
 .advantages_item:nth-last-child(-n+3) {
   background-color: #eeeeee;
 }
 
 
+
 /*Заинтересовались*/
+.interest {
+  height: 292px;
+  background-color: #647b8d;
+}
+.form-wrapper {
+  position: relative;
+  top: 147px;
+  width: 570px;
+  margin: 0 auto;
+
+}
 .interest_title {
   font-size: 30px;
   line-height: 36px;
@@ -93,6 +202,8 @@ h3 {
   background-color: #766357;
   border: none;
   text-transform: uppercase;
+  height: 85px;
+  width: 100%;
 }
 .hotel-search_btn:hover,
 .hotel-search_btn:focus {
@@ -107,6 +218,7 @@ h3 {
   font-weight: 700;
   color: black;
   text-align: left;
+  background-color: white;
 }
 .hotel-search_form input,
 .calendar_btn{
@@ -176,10 +288,14 @@ h3 {
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: #647b8d;
+  min-height: 217px;
+  padding-top: 26px;
+  padding-left: 70px;
 }
 .filter_form {
   font-size: 16px;
   color: white;
+  display: flex;
 }
 .filter_form fieldset {
   border-style: none;
@@ -188,7 +304,7 @@ h3 {
 .cost label {
   font-weight: 700;
 }
-.filter_result{
+.filter_result_btn{
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -199,17 +315,39 @@ h3 {
 .infrastructure_list,
 .type_list {
   list-style: none;
+  text-align: left;
 }
+.filter_form fieldset:nth-child(1) {
+  margin-right: 130px;
+}
+.filter_form fieldset:nth-child(2) {
+  margin-right: 350px;
+}
+.filter_form fieldset {
+  padding: 0;
+}
+.cost {
+  width: 320px;
 
 
+}
 /*Подбор отеля - результаты*/
 /*Сортировка*/
+.result_sort {
+  display: flex;
+  height: 86px;
+}
+.result_list_item, .hotels .footer{
+  border-top: 1px solid #e5e5e5;
+}
 .result_sort span {
   font-size: 12px;
   line-height: 18px;
+  /*margin-left: auto;*/
 }
 .sort_list {
   list-style: none;
+  display: flex;
 }
 .sort_link {
   font-size: 12px;
@@ -233,7 +371,6 @@ h3 {
   cursor: default;
   border: none;
 }
-
 
 /*Результаты*/
 .result_list {
@@ -290,6 +427,8 @@ h3 {
 /*Футер*/
 .footer{
   background-color: rgba(255,255,255,0.9);
+  display: flex;
+  height: 120px;
 }
 .visit-sedona {
   font-size: 21px;
@@ -301,41 +440,70 @@ h3 {
   color: inherit;
   text-decoration: none;
 }
-/*.social_list {*/
-/*  list-style: none;*/
-/*}*/
-/*.social_list li {*/
-/*  width: 46px;*/
-/*  height: 48px;*/
-/*}*/
-/*.social_list a {*/
-/*  display: inline-block;*/
-/*  font-size: 0;*/
-/*  width: 100%;*/
-/*  height: 100%;*/
-/*  background-color: #81b3d2;*/
-/*}*/
-/*.social_list a:before{*/
-/*  content: '';*/
-/*  display: inline-block;*/
-/*  vertical-align: middle;*/
-/*  height: 100%;*/
-/*}*/
-/*.social_list svg {*/
-/*  display: inline-block;*/
-/*  vertical-align: middle;*/
-/*}*/
-/*.social_list a:hover,*/
-/*.social_list a:focus {*/
-/*  background-color: #669ec0;*/
-/*}*/
-/*.social_list a:active {*/
-/*  background-color: #5496bd;*/
-/*}*/
-/*.social_list a:active path {*/
-/*  fill-opacity: 30%;*/
-/*}*/
+.social_list {
+  list-style: none;
+  display: flex;
+}
+
 .htmlacademy {
   line-height: 26px;
   font-weight: 700;
+}
+
+/*Оступы*/
+
+.result_sort {
+  padding-top: 30px;
+  padding-left: 70px ;
+}
+.result_sort h3{
+  margin-right: 50px;
+}
+.result_sort span:nth-child(2) {
+  margin-right: 40px;
+}
+.sort_list li:not(:last-child) {
+  margin-right: 30px;
+}
+.sort_list {
+  margin-right: 500px;
+}
+
+
+.result_list_item {
+  padding-top: 30px;
+  padding-left: 72px;
+}
+.result_list_item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.result_list_item {
+  display: flex;
+}
+.result_list_item img {
+  margin-right: 30px;
+}
+.result {
+  margin-bottom: 30px;
+}
+.result_list_wrap {
+  display: flex;
+  flex-direction: column;
+}
+.result_list_item .result_list_wrap:nth-child(3) {
+  margin-right: 70px;
+  margin-left: auto;
+}
+
+
+.footer {
+  padding-top: 30px;
+  padding-left: 130px;
+  text-align: left;
+}
+.visit-sedona {
+  margin-right: 170px;
+}
+.social_list {
+  margin-right: 200px;
 }
