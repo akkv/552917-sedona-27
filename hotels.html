@@ -7,10 +7,10 @@
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="hotels">
-<div class="container">
+<body class="inner_page">
+<div class="page_wrap">
   <header>
-    <a href="index.html" title="Главная страница"><img src="img/logo-sedona.svg" width="140px" height="72px"
+    <a href="index.html" title="Главная страница"><img src="img/logo-sedona.svg" width="140" height="72"
                                                        alt="логотип sedona" class="main_logo"></a>
     <nav class="main_nav">
       <ul class="nav_list">
@@ -24,27 +24,28 @@
   <main class="main_hotels">
     <h2 class="visually-hidden">Подбор гостиницы в Седоне</h2>
     <section class="filter">
+      <h2 class="visually-hidden">Опции подбора отеля в Седоне</h2>
       <form action="https://echo.htmlacademy.ru" method="get" class="filter_form">
         <fieldset>
           <legend>Инфраструктура:</legend>
           <ul class="infrastructure_list">
             <li>
               <label class="check">
-                <input class="check_input" type="checkbox" name="pool" checked>
+                <input class="check_input visually-hidden" type="checkbox" name="pool" checked>
                 <span class="check_box"></span>
                 Бассейн
               </label>
             </li>
             <li>
               <label class="check">
-                <input class="check_input" type="checkbox" name="parking">
+                <input class="check_input visually-hidden" type="checkbox" name="parking">
                 <span class="check_box"></span>
                 Парковка
               </label>
             </li>
             <li>
               <label class="check">
-                <input class="check_input" type="checkbox" name="wifi">
+                <input class="check_input visually-hidden" type="checkbox" name="wifi">
                 <span class="check_box"></span>
                 Wi-fi
               </label>
@@ -56,34 +57,46 @@
           <ul class="type_list">
             <li>
               <label class="check">
-                <input class="check_input" type="checkbox" name="Hotel" checked>
+                <input class="check_input visually-hidden" type="checkbox" name="Hotel" checked>
                 <span class="check_box"></span>
                 Гостиница
               </label>
             </li>
             <li>
               <label class="check">
-                <input class="check_input" type="checkbox" name="Motel" checked>
+                <input class="check_input visually-hidden" type="checkbox" name="Motel" checked>
                 <span class="check_box"></span>
                 Мотель
               </label>
             </li>
             <li>
               <label class="check">
-                <input class="check_input" type="checkbox" name="Apartments" checked>
+                <input class="check_input visually-hidden" type="checkbox" name="Apartments" checked>
                 <span class="check_box"></span>
                 Апартаменты
               </label>
             </li>
           </ul>
         </fieldset>
-        <div class="cost">
-          <label for="cost_id">Стоимость в сутки (Р):</label>
+        <div class="filter_cost">
+          <span>Стоимость в сутки (Р):</span>
           <div class="cost_value">
             <div>от 0</div>
             <div>до 3000</div>
           </div>
-          <input type="range" class="cost_range" name="cost" id="cost_id" min="0" max="3000" step="1">
+          <div class="range_filter">
+            <div class="range_controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle_min" tabindex="0"></div>
+              <div class="toggle toggle_max" tabindex="0"></div>
+            </div>
+            <div class="visually-hidden">
+              <label class="min-price">от <input name="min-price" type="text" value="0" tabindex="-1"></label>
+              <label class="max-price">до <input name="max-price" type="text" value="3000" tabindex="-1"></label>
+            </div>
+          </div>
           <button type="button" class="filter_result_btn">Показать</button>
         </div>
       </form>
@@ -187,12 +200,11 @@
   <footer class="footer">
     <p class="visit-sedona">
       <span>#visitSEDONA</span>
-      <a href="tel:+7(495) 666-02-66">Тел: +7(495) 666-02-66</a>
+      <a href="tel:+7(495)666-02-66">Тел: +7(495) 666-02-66</a>
     </p>
     <ul class="social_list">
       <li><a href="https://twitter.com/" class="social_tw">Twitter
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15"
-             viewBox="0 0 17 15">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15">
           <path fill="#FFF"
                 d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/>
         </svg>
@@ -203,8 +215,7 @@
         </svg>
       </a></li>
       <li><a href="https://www.youtube.com/" class="social_yt">Youtube
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16"
-             viewBox="0 0 20 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16">
           <path fill="#FFF"
                 d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
         </svg>
