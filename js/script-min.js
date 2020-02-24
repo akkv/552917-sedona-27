@@ -1,0 +1,1 @@
+"use strict";var popup=document.querySelector(".hotel-search_form"),popupButton=document.querySelector(".hotel-search_btn");popupButton.addEventListener("click",function(p){p.preventDefault(),popup.classList.contains("popup-show")?(popup.classList.remove("popup-show"),popup.classList.add("popup-close")):(popup.classList.add("popup-show"),popup.classList.remove("popup-close"))});

@@ -138,6 +138,8 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  z-index: 2;
+  position: relative;
 }
 .sedona_cool p {
   line-height: 26px;
@@ -220,17 +222,7 @@ header {
   padding-right: 75px;
 }
 .interest {
-  min-height: 292px;
-  padding: 0 200px;
-  padding-top: 50px;
   position: relative;
-}
-.form-wrapper {
-  position: absolute;
-  width: 570px;
-  margin: 0 auto;
-  left: 315px;
-  bottom: -393px;
 }
 .interest_title {
   margin: 0;
@@ -256,7 +248,7 @@ header {
   border: none;
   text-transform: uppercase;
   height: 85px;
-  width: 100%;
+  width: 570px;
 }
 .hotel-search_btn:hover,
 .hotel-search_btn:focus {
@@ -334,11 +326,10 @@ header {
 .form-wrapper {
   background-color: white;
 }
-.hotel-search_btn {
-  margin-bottom: 55px;
-}
 .hotel-search_form {
   padding-left: 57px;
+  padding-top: 55px;
+  padding-right: 55px;
 }
 .date:nth-child(1) {
   margin-bottom: 29px;
@@ -905,3 +896,37 @@ input[type=number] {
 .htmlacademy_link:active svg {
   fill: #bdbbbc;
 }
+.interest-wrap {
+  min-height: 292px;
+  padding: 0 200px;
+  padding-top: 50px;
+  position: relative;
+  background-color: white;
+  z-index: 2;
+}
+.hotel-search_form {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  background-color: white;
+  left: calc(50% - 285px);
+}
+.popup-close {
+  bottom: 0;
+  animation-name: close;
+  animation-duration: 0.2s;
+}
+.popup-show {
+  bottom: -393px;
+  animation-name: open;
+  animation-duration: 0.2s;
+}
+@keyframes open {
+  from {bottom: 0;}
+  to {bottom: -393px;}
+}
+@keyframes close {
+  from {bottom: -393px;}
+  to {bottom: 0;}
+}
+
